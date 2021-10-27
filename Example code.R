@@ -1,0 +1,20 @@
+library(devtools)
+install_github("Idrissben/ExpoMatch---Idriss-bennis-Capstone")
+library(ExpoMatch)
+
+# PREPARE LALONDE
+lalonde_ctrl <- read.dta("psid_controls.dta")
+lalonde_exp <- read.dta("nsw_dw.dta")
+
+lalonde_trt <- lalonde_exp[which(lalonde_exp$treat == 1), ]
+
+lalonde <- rbind(lalonde_trt,lalonde_ctrl)
+
+X <- cbind(lalonde$age, lalonde$re74, lalonde$re75, lalonde$education, lalonde$nodegree, lalonde$married,lalonde$black,lalonde$hispanic)
+Tr <- lalonde$treat
+Y <- lalonde$re78
+
+
+set.seed(420)
+
+nm_lalonde = ExpoMatch_function(Tr = Tr, X = X,pop.size = 80, max.generations = 15)
