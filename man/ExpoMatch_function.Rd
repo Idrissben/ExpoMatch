@@ -13,13 +13,13 @@ ExpoMatch_function(Tr, X, pop.size = 10, max.generations = 5, domains = c(0.5, 1
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Tr}{
-%%     ~~Describe \code{Tr} here~~
+The treatment assignment vector
 }
   \item{X}{
-%%     ~~Describe \code{X} here~~
+The covariates
 }
   \item{pop.size}{
-%%     ~~Describe \code{pop.size} here~~
+The population size of a single generation of the genetic algorithm. Currently, it applies to both layers of the ExpoMatch Function.
 }
   \item{max.generations}{
 %%     ~~Describe \code{max.generations} here~~
