@@ -10,10 +10,38 @@
 #' @export
 
 
+install.packages('Matching')
+
+install.packages('rgenoud')
+
+install.packages('foreign')
+
 library(Matching)
+
 library(rgenoud)
+
 library(foreign)
 
+# Balance matrix should NOT contain the outcome or treatment vector
+
+# fit function #1 is Chris's biggest linear combination discrepancy metric
+
+myfit.imb <- function(matches, BM) {
+  # ASSUME
+  # no outcome and no treatment column in BM
+  # BM is scaled to mean=0, sd=1
+
+  # prepare inputs for Chris's metric
+  trt.X <- BM[matches[, 1], ]
+  ctrl.X <- BM[matches[, 2], ]
+  
+  # find the difference between treated and control units
+  # this returns a matrix with element-wise differences
+  t <- trt.X - ctrl.X
+  # sum each column, and square the value & then sum each element
+  return(sum(colSums(t)^2))
+  
+}
 
 ExpoMatch_function <- function(Tr,
                                X,
