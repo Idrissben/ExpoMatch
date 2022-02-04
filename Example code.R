@@ -1,10 +1,10 @@
 library(devtools)
-install_github("Idrissben/ExpoMatch---Idriss-bennis-Capstone")
+install_github("Idrissben/ExpoMatch")
 library(ExpoMatch)
 
 # PREPARE LALONDE
-lalonde_ctrl <- read.dta("psid_controls.dta")
-lalonde_exp <- read.dta("nsw_dw.dta")
+lalonde_ctrl <- read.dta("http://www.nber.org/~rdehejia/data/psid_controls.dta")
+lalonde_exp <- read.dta("http://www.nber.org/~rdehejia/data/nsw_dw.dta")
 
 lalonde_trt <- lalonde_exp[which(lalonde_exp$treat == 1), ]
 
