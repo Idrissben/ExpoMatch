@@ -1,3 +1,4 @@
+install.packages('foreign'à
 library(devtools)
 install_github("Idrissben/ExpoMatch")
 library(ExpoMatch)
