@@ -133,7 +133,7 @@ ExpoMatch_function <- function(Tr,
                       max.generations = max.generations,
                       Domains = dom,
                       boundary.enforcement = 2,
-                      starting.values = rep(1, n.var))
+                      starting.values =  start.weights)
 
   # parse the file to find the best result's weights
   file_data <- read.delim(paste(tempdir(), "/genoud.txt", sep = ""), skip = 1, header = FALSE, nrows = 1)
