@@ -2,6 +2,7 @@ library(devtools)
 install_github("Idrissben/ExpoMatch")
 library(ExpoMatch)
 
+library(foreign)
 # PREPARE LALONDE
 lalonde_ctrl <- read.dta("http://www.nber.org/~rdehejia/data/psid_controls.dta")
 lalonde_exp <- read.dta("http://www.nber.org/~rdehejia/data/nsw_dw.dta")
