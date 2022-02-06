@@ -5,14 +5,16 @@ sudo apt -y upgrade
 
 sudo apt -y install r-base
 
+apt-get -y build-dep libcurl4-gnutls-dev
+apt-get -y install libcurl4-gnutls-dev
+
 R
 
 install.packages('foreign')
 yes
 
 
-apt-get -y build-dep libcurl4-gnutls-dev
-apt-get -y install libcurl4-gnutls-dev
+
 
 install.packages('devtools')
 yes
