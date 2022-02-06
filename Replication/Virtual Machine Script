@@ -11,19 +11,19 @@ sudo apt-get -y install libcurl4-gnutls-dev
 R
 
 install.packages('foreign')
-yes
+
+library(foreign)
 
 
 
 
-install.packages('devtools')
-yes
+install.packages('devtools',dependencies=TRUE)
+
 
 library(devtools)
 install_github("Idrissben/ExpoMatch")
 library(ExpoMatch)
 
-library(foreign)
 # PREPARE LALONDE
 lalonde_ctrl <- read.dta("http://www.nber.org/~rdehejia/data/psid_controls.dta")
 lalonde_exp <- read.dta("http://www.nber.org/~rdehejia/data/nsw_dw.dta")
