@@ -1,3 +1,10 @@
+sudo apt update
+
+sudo apt -y upgrade
+
+
+sudo apt -y install r-base
+
 install.packages('foreign')
 library(devtools)
 install_github("Idrissben/ExpoMatch")
