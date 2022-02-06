@@ -22,7 +22,7 @@ install.packages('devtools',dependencies=TRUE)
 
 
 library(devtools)
-install_github("Idrissben/ExpoMatch")
+install_github("Idrissben/ExpoMatch",force=TRUE)
 library(ExpoMatch)
 
 # PREPARE LALONDE
