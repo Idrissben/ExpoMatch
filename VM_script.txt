@@ -1,14 +1,30 @@
+sudo apt update
+
+sudo apt -y upgrade
+
+
+sudo apt -y install r-base
+
+sudo apt-get -y build-dep libcurl4-gnutls-dev
+sudo apt-get -y install libcurl4-gnutls-dev
+sudo apt-get install libxml2-dev
+
+R
+
 install.packages('foreign')
 
 library(foreign)
 
+
 install.packages('devtools',dependencies=TRUE)
+
 
 library(devtools)
 install_github("Idrissben/ExpoMatch",force=TRUE)
-library(ExpoMatch)
 
 devtools::source_url("https://raw.githubusercontent.com/Idrissben/ExpoMatch/main/R/ExpoMatch_function.R")
+
+library(ExpoMatch)
 
 # PREPARE LALONDE
 lalonde_ctrl <- read.dta("http://www.nber.org/~rdehejia/data/psid_controls.dta")
