@@ -9,7 +9,7 @@
 #' @return A matrix of the infile
 #' @export
 
-
+library(Matching)
 
 # Balance matrix should NOT contain the outcome or treatment vector
 
