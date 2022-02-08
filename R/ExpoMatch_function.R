@@ -9,16 +9,6 @@
 #' @return A matrix of the infile
 #' @export
 
-install.packages('Matching')
-install.packages('rgenoud')
-install.packages('foreign')
-
-library(Matching)
-
-library(rgenoud)
-
-library(foreign)
-
 
 ExpoMatch_function <- function(Tr,
                      X,
