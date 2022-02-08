@@ -10,17 +10,6 @@
 #' @export
 
 
-install.packages('Matching')
-
-install.packages('rgenoud')
-
-install.packages('foreign')
-
-library(Matching)
-
-library(rgenoud)
-
-library(foreign)
 
 # Balance matrix should NOT contain the outcome or treatment vector
 
