@@ -9,8 +9,6 @@
 #' @return A matrix of the infile
 #' @export
 
-library(Matching)
-
 # Balance matrix should NOT contain the outcome or treatment vector
 
 # fit function #1 is Chris's biggest linear combination discrepancy metric
@@ -32,7 +30,7 @@ myfit.imb <- function(matches, BM) {
   
 }
 
-ExpoMatch_function <- function(Tr,
+Alt_ExpoMatch <- function(Tr,
                                X,
                                pop.size = 10,
                                max.generations = 5,
