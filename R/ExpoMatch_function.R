@@ -32,10 +32,11 @@ ExpoMatch_function <- function(Tr,
     return('HIGHEST POSSIBLE EXPONENT OUT OF BOUNDS')
   }
   if(!"Matching" %in% (.packages())){
-    library(Matching)
+        print("Missing Matching library, can not proceed")
+
   }
   if(!"rgenoud" %in% (.packages())){
-    library(rgenoud)
+    print("Missing rgenoud library, can not proceed")
   }
 
   # check if user inputted starting weights but didn't disable starting genmatch
