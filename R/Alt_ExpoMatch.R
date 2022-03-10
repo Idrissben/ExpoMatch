@@ -15,13 +15,13 @@
 
 
 Alt_ExpoMatch <- function(Tr,
-                               X,
-                               pop.size = 10,
-                               max.generations = 5,
-                               domains = c(0.50, 1.99),
-                               start.gm = TRUE,
-                               start.weights = NULL,
-                               print.level = 1) {
+                          X,
+                          pop.size = 10,
+                          max.generations = 5,
+                          domains = c(0.50, 1.99),
+                          start.gm = TRUE,
+                          start.weights = NULL,
+                          print.level = 1) {
 
   start.time <- Sys.time()
 
@@ -73,7 +73,7 @@ Alt_ExpoMatch <- function(Tr,
   # sum each column, and square the value & then sum each element
   return(sum(colSums(t)^2))
   
-}
+  }
 
   if (start.gm) {
     # run an initial GenMatch to get starting parameters
