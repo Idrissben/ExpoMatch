@@ -129,7 +129,7 @@ Alt_ExpoMatch <- function(Tr,
 
   genoudout <- genoud(GenMatchWrapper,
                       nvars = n.var,
-                      max = TRUE,
+                      max = FALSE,
                       pop.size = pop.size,
                       max.generations = max.generations,
                       Domains = dom,
