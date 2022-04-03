@@ -4,12 +4,8 @@ df = data.frame(matrix(ncol=10,nrow=0, dimnames=list(NULL, c("name", "time taken
 
 names = drive_ls("https://drive.google.com/drive/u/0/folders/1j60vqxqes-vs_I094sIZgQIllv_arMFT")
 
-library(googledrive)
 ### MONTE CARLO SIMULATION
 ################################### EXPOMATCH
-
-library(Matching)
-library(rgenoud)
 
 ExpoMatch_function <- function(Tr,
                                X,
@@ -242,5 +238,5 @@ maccabee <- function(dtaname,id,seed=123,pop.size=200,fit.func = myfit.imb,wait.
 }
 
 
-for (i in 143:180){df[nrow(df)+1,] = maccabee(dtaname = names[i,1],id = names[i,2],seed=120,pop.size=10,wait.generations=5,fit.func = myfit.imb)}
+for (i in 1:180){df[nrow(df)+1,] = maccabee(dtaname = names[i,1],id = names[i,2],seed=120,pop.size=10,wait.generations=5,fit.func = myfit.imb)}
 
